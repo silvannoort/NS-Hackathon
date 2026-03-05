@@ -2,7 +2,23 @@ import Anthropic from "@anthropic-ai/sdk";
 
 const client = new Anthropic({ apiKey: process.env.ANTHROPIC_API_KEY });
 
-const SYSTEM_PROMPT = `You are a friendly and clear assistant for the DUO Student OV Card (public transport card for students in the Netherlands). You help students with questions about:
+const SYSTEM_NL = `Je bent een vriendelijke en duidelijke assistent voor de DUO Studenten-OV-kaart (de openbaar vervoerkaart voor studenten in Nederland). Je helpt studenten met vragen over:
+
+- De OV-kaart aanvragen (via Mijn DUO met DigiD)
+- Doordeweeks of in het weekend gratis reizen (en 40% weekendkorting bij de doordeweeks-optie)
+- De OV-kaart pauzeren tijdens een tussenjaar
+- De OV-kaart stopzetten bij afstuderen of stoppen (boetes vermijden)
+- Foutieve registratie oplossen
+- Doorstromen van mbo naar hbo (geen actie nodig als er geen onderbreking is)
+
+Regels:
+- Antwoord altijd in het Nederlands
+- Wees beknopt en praktisch — geef concrete stappen
+- Als je iets niet weet, verwijs dan naar duo.nl of het telefoonnummer van DUO: 050-599 77 55
+- Ga niet in op onderwerpen buiten de OV-kaart of DUO-diensten
+- Vermijd jargon, schrijf in begrijpelijk Nederlands`;
+
+const SYSTEM_EN = `You are a friendly and clear assistant for the DUO Student OV Card (public transport card for students in the Netherlands). You help students with questions about:
 
 - Applying for the OV card (via My DUO with DigiD)
 - Weekday vs weekend free travel (and 40% weekend discount with weekday option)
@@ -19,12 +35,13 @@ Rules:
 - Avoid jargon, write in plain English`;
 
 export async function POST(req: Request) {
-  const { messages } = await req.json();
+  const { messages, lang } = await req.json();
+  const systemPrompt = lang === "en" ? SYSTEM_EN : SYSTEM_NL;
 
   const stream = client.messages.stream({
     model: "claude-opus-4-6",
     max_tokens: 1024,
-    system: SYSTEM_PROMPT,
+    system: systemPrompt,
     messages,
   });
 
