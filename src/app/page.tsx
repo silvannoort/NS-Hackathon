@@ -101,33 +101,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Status-banner (toegankelijkheidsverbetering: proactieve status) */}
-      <div className="bg-duo-blue-light border-b border-duo-gray-border px-4 py-3">
-        <div className="max-w-5xl mx-auto flex items-start gap-3 text-sm">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="18"
-            height="18"
-            fill="none"
-            stroke="#01689B"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-            className="shrink-0 mt-0.5"
-          >
-            <circle cx="12" cy="12" r="10" />
-            <path strokeLinecap="round" strokeLinejoin="round" d="M12 16v-4m0-4h.01" />
-          </svg>
-          <span className="text-duo-blue-dark">
-            <strong>Tip:</strong> Studeer je in september? Vraag je OV-kaart al
-            op in augustus om zeker op tijd te zijn.{" "}
-            <Link href="/faq#wanneer-aanvragen" className="font-semibold">
-              Meer informatie
-            </Link>
-          </span>
-        </div>
-      </div>
-
       {/* Voordelen */}
       <section
         className="max-w-5xl mx-auto px-4 py-12"
@@ -323,69 +296,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* FAQ preview */}
-      <section
-        className="max-w-5xl mx-auto px-4 py-12"
-        aria-labelledby="faq-preview-heading"
-      >
-        <h2
-          id="faq-preview-heading"
-          className="text-2xl font-bold text-duo-navy mb-6"
-        >
-          Veelgestelde vragen
-        </h2>
-        <div className="flex flex-col gap-3">
-          {[
-            {
-              q: "Hoe lang duurt het aanvragen van de OV-kaart?",
-              a: "Na aanvraag duurt het een paar werkdagen voordat je kaart is aangemaakt en je deze kunt activeren.",
-            },
-            {
-              q: "Kan ik de OV-kaart pauzeren tijdens een tussenjaar?",
-              a: "Ja, je kunt de OV-kaart tijdelijk stopzetten. Als je weer studeert, vraag je hem opnieuw aan.",
-            },
-            {
-              q: "Wat zijn de gevolgen als ik de OV-kaart niet op tijd stop?",
-              a: "DUO kan de reiskosten terugvorderen over de periode dat je de kaart onterecht hebt gebruikt.",
-            },
-          ].map((item) => (
-            <details
-              key={item.q}
-              className="border border-duo-gray-border rounded-lg group"
-            >
-              <summary className="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer font-semibold text-duo-navy hover:bg-duo-blue-light list-none">
-                {item.q}
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  height="18"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                  className="shrink-0 transition-transform group-open:rotate-180"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </summary>
-              <div className="px-5 pb-5 pt-1 text-sm text-duo-gray leading-relaxed border-t border-duo-gray-border">
-                {item.a}
-              </div>
-            </details>
-          ))}
-        </div>
-        <div className="mt-6">
-          <Link href="/faq" className="btn-secondary no-underline">
-            Alle vragen bekijken
-            <IconArrow />
-          </Link>
-        </div>
-      </section>
     </>
   );
 }

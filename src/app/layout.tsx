@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SkipLink from "@/components/SkipLink";
+import Chatbot from "@/components/Chatbot";
 
 export const metadata: Metadata = {
   title: "Studenten-OV-kaart | DUO",
@@ -32,6 +33,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <Chatbot />
       </body>
     </html>
   );
