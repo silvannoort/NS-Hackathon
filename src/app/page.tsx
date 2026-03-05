@@ -160,7 +160,7 @@ export default function HomePage() {
                 step: 1,
                 title: "Inloggen bij Mijn DUO",
                 desc: "Log in met je DigiD op Mijn DUO. Heb je nog geen DigiD? Vraag dit eerst aan via digid.nl.",
-                link: { label: "Naar Mijn DUO", href: "#mijn-duo" },
+                link: { label: "Naar Mijn DUO", href: "https://mijn.duo.nl" },
               },
               {
                 step: 2,
@@ -199,6 +199,8 @@ export default function HomePage() {
                   {item.link && (
                     <Link
                       href={item.link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-flex items-center gap-1 mt-2 text-sm font-semibold text-duo-blue"
                     >
                       {item.link.label}

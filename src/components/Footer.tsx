@@ -47,7 +47,9 @@ export default function Footer() {
             <li>Bereikbaar ma–vr 8:00–17:00</li>
             <li>
               <Link
-                href="#contact"
+                href="https://www.duo.nl/contact/contactformulier.jsp"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-blue-200 hover:text-white no-underline hover:underline"
               >
                 Contactformulier
@@ -63,13 +65,19 @@ export default function Footer() {
           <span>© {new Date().getFullYear()} Dienst Uitvoering Onderwijs</span>
           <nav aria-label="Juridische links">
             <ul className="list-none m-0 p-0 flex gap-4">
-              {["Privacy", "Toegankelijkheid", "Cookies"].map((item) => (
-                <li key={item}>
+              {[
+                { label: "Privacy", href: "https://www.duo.nl/particulier/privacybeleid.jsp" },
+                { label: "Toegankelijkheid", href: "https://www.duo.nl/toegankelijkheid/" },
+                { label: "Cookies", href: "https://www.duo.nl/cookies/" },
+              ].map((item) => (
+                <li key={item.label}>
                   <Link
-                    href="#"
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-blue-200 hover:text-white no-underline hover:underline"
                   >
-                    {item}
+                    {item.label}
                   </Link>
                 </li>
               ))}

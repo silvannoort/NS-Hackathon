@@ -280,7 +280,7 @@ export default function ActiegidsPage() {
             <Link href="/faq" className="btn-primary no-underline">
               Veelgestelde vragen
             </Link>
-            <Link href="#contact" className="btn-secondary no-underline">
+            <Link href="https://www.duo.nl/contact/contactformulier.jsp" target="_blank" rel="noopener noreferrer" className="btn-secondary no-underline">
               Contact DUO
             </Link>
           </div>

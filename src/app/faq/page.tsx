@@ -208,7 +208,9 @@ export default function FaqPage() {
                 Gebruik het contactformulier op duo.nl
               </p>
               <Link
-                href="#contactformulier"
+                href="https://www.duo.nl/contact/contactformulier.jsp"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-sm font-semibold text-duo-blue"
               >
                 Naar contactformulier →

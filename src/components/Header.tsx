@@ -7,7 +7,7 @@ const navItems = [
   { label: "OV-kaart informatie", href: "/" },
   { label: "Actiegids", href: "/actiegids" },
   { label: "Veelgestelde vragen", href: "/faq" },
-  { label: "Mijn DUO", href: "#mijn-duo", external: false },
+  { label: "Mijn DUO", href: "https://mijn.duo.nl", external: false },
 ];
 
 export default function Header() {
