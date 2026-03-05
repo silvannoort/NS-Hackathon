@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 
 const navItems = [
@@ -15,16 +16,19 @@ export default function Header() {
 
   return (
     <header className="bg-duo-navy text-white" role="banner">
-      {/* Rijksoverheid-stijl topbar */}
-      <div className="bg-duo-blue-dark">
-        <div className="max-w-5xl mx-auto px-4 py-1 flex items-center gap-2 text-sm">
-          {/* DUO logo simulatie */}
-          <span className="font-bold tracking-wide text-white text-base">
-            DUO
-          </span>
-          <span className="text-blue-200 hidden sm:inline">
-            Dienst Uitvoering Onderwijs
-          </span>
+      {/* Topbar met DUO logo */}
+      <div className="bg-white border-b border-gray-200">
+        <div className="max-w-5xl mx-auto px-4 py-2">
+          <Link href="https://www.duo.nl" target="_blank" rel="noopener noreferrer" aria-label="Naar duo.nl">
+            <Image
+              src="/duo-logo.png"
+              alt="Dienst Uitvoering Onderwijs"
+              width={260}
+              height={60}
+              className="h-10 w-auto"
+              priority
+            />
+          </Link>
         </div>
       </div>
 
