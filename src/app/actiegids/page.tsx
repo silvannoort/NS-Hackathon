@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import HashScroller from "@/components/HashScroller";
 
 export const metadata: Metadata = {
   title: "Actiegids OV-kaart | DUO",
@@ -106,6 +107,7 @@ const sections: Section[] = [
 export default function ActiegidsPage() {
   return (
     <>
+      <HashScroller />
       {/* Hero */}
       <section
         className="bg-duo-navy text-white py-10 px-4"
