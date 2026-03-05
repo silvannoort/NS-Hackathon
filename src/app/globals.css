@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "RO Sans", "Source Sans Pro", ui-sans-serif, system-ui, sans-serif;
+    color: #1c1c1c;
+  }
+
+  h1 {
+    @apply text-2xl font-bold leading-tight;
+  }
+  h2 {
+    @apply text-xl font-bold leading-snug;
+  }
+  h3 {
+    @apply text-lg font-semibold leading-snug;
+  }
+
+  /* Focus stijl voor toegankelijkheid */
+  :focus-visible {
+    outline: 3px solid #f9c706;
+    outline-offset: 2px;
+  }
+
+  a {
+    @apply text-duo-blue underline;
+  }
+  a:hover {
+    @apply text-duo-blue-dark;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-duo-navy text-white font-semibold px-5 py-3 rounded hover:bg-duo-blue-dark focus-visible:ring-2 focus-visible:ring-duo-yellow transition-colors;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 border-2 border-duo-navy text-duo-navy font-semibold px-5 py-3 rounded hover:bg-duo-blue-light focus-visible:ring-2 focus-visible:ring-duo-yellow transition-colors;
+  }
+
+  .card {
+    @apply bg-white border border-duo-gray-border rounded-lg p-6 shadow-sm;
+  }
+
+  .alert-info {
+    @apply bg-duo-blue-light border-l-4 border-duo-blue text-duo-text p-4 rounded;
+  }
+
+  .alert-warning {
+    @apply bg-yellow-50 border-l-4 border-duo-yellow text-duo-text p-4 rounded;
+  }
+
+  .alert-error {
+    @apply bg-red-50 border-l-4 border-duo-error text-duo-text p-4 rounded;
+  }
+
+  .step-badge {
+    @apply flex items-center justify-center w-8 h-8 rounded-full bg-duo-navy text-white font-bold text-sm shrink-0;
+  }
+}
