@@ -93,7 +93,7 @@ export default function HomePage() {
               OV-kaart aanvragen
               <IconArrow />
             </Link>
-            <Link href="/actiegids" className="btn-secondary bg-transparent border-white text-white hover:bg-white/10 no-underline">
+            <Link href="/actiegids" className="btn-secondary bg-transparent border-white text-white hover:bg-white hover:text-duo-navy no-underline">
               Actiegids bekijken
               <IconArrow />
             </Link>

@@ -34,11 +34,11 @@
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center gap-2 bg-duo-navy text-white font-semibold px-5 py-3 rounded hover:bg-duo-blue-dark focus-visible:ring-2 focus-visible:ring-duo-yellow transition-colors;
+    @apply inline-flex items-center gap-2 bg-duo-navy text-white font-semibold px-5 py-3 rounded hover:bg-duo-blue focus-visible:ring-2 focus-visible:ring-duo-yellow transition-colors;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center gap-2 border-2 border-duo-navy text-duo-navy font-semibold px-5 py-3 rounded hover:bg-duo-blue-light focus-visible:ring-2 focus-visible:ring-duo-yellow transition-colors;
+    @apply inline-flex items-center gap-2 border-2 border-duo-navy text-duo-navy font-semibold px-5 py-3 rounded hover:bg-duo-navy hover:text-white focus-visible:ring-2 focus-visible:ring-duo-yellow transition-colors;
   }
 
   .card {
