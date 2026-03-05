@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: "class",
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -9,7 +10,6 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // DUO / Rijksoverheid huisstijl kleuren
         duo: {
           navy: "#003082",
           blue: "#01689B",
@@ -17,7 +17,7 @@ const config: Config = {
           "blue-light": "#EEF5FB",
           yellow: "#F9C706",
           "yellow-dark": "#C19700",
-          gray: "#696969",
+          gray: "#555555", // darkened from #696969 for WCAG AA contrast
           "gray-light": "#F3F3F3",
           "gray-border": "#B4B4B4",
           white: "#FFFFFF",
@@ -27,7 +27,6 @@ const config: Config = {
         },
       },
       fontFamily: {
-        // RO Sans is de Rijksoverheid font; valt terug op systeem sans-serif
         sans: [
           "RO Sans",
           "Source Sans Pro",
@@ -35,12 +34,6 @@ const config: Config = {
           "system-ui",
           "sans-serif",
         ],
-      },
-      fontSize: {
-        "duo-h1": ["2rem", { lineHeight: "2.5rem", fontWeight: "700" }],
-        "duo-h2": ["1.5rem", { lineHeight: "2rem", fontWeight: "700" }],
-        "duo-h3": ["1.25rem", { lineHeight: "1.75rem", fontWeight: "600" }],
-        "duo-body": ["1rem", { lineHeight: "1.625rem" }],
       },
     },
   },
